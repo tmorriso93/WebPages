@@ -1,0 +1,62 @@
+.moveOn {
+    color: rgb(252, 252, 252);
+    display: inline-block;
+    text-align: center;
+}
+
+.bigText {
+    
+        font: 46px/50px DINPro-Bold,Arial,Verdana,sans-serif;
+            font-style: normal;
+            font-weight: normal;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        margin: auto;
+        position: relative;
+        color: #ffffff;
+}
+
+.grid-container {
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-between;
+
+    
+    
+}
+
+p.animate {
+    margin-right: 25px;
+}
+
+.animate {
+    color: #ffffff;
+}
+
+#section-4 {
+    background-color: black;
+}
+
+.grid-container2 {
+    display: grid;
+    justify-content: end;
+    grid-template-columns: 45% 0%;
+    
+}
+
+.grid-container2 .animate {
+    visibility: inherit;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    
+}
+
+.grid-container2 h3 {
+    font-size: 20px;
+}
+
+.grid-container2 h2 {
+    font-weight: 500;
+}
