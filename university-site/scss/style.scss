@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Alegreya+Sans:ital,wght@1,300&family=Open+Sans+Condensed:wght@300&display=swap");
+
+// font-family: 'Abel', sans-serif;
+
+// font-family: 'Alegreya Sans', sans-serif;
+
+// font-family: 'Open Sans Condensed', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+
+  .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+      url(/imgs/img03.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    //navbar section
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 25px;
+      }
+
+      .nav-links {
+        flex: 1;
+        text-align: right;
+
+        ul li {
+          list-style: none;
+          display: inline-block;
+          padding: 8px 12px;
+          position: relative;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+          }
+        }
+
+        //red underline on nav items, set to width: 0%
+        ul li::after {
+          content: "";
+          width: 0%;
+          height: 2px;
+          background: #f44336;
+          display: block;
+          margin: auto;
+          transition: 0.5s;
+        }
+
+        //show red underline on hover, width: 100%
+        ul li:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    //content in the middile section
+    .text-box {
+      width: 90%;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        margin: 10px 0 40px;
+        font-size: 14px;
+        color: #fff;
+        text-shadow: 0.5px 0.5px 1px rgb(66, 36, 36);
+      }
+
+      //button styling
+      .hero-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+      }
+
+      //button hover styling
+      .hero-btn:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+      }
+    }
+
+    //hide icons on large screen
+    .icons {
+      display: none;
+    }
+  }
+
+  //course section
+  .course {
+    width: 100%;
+    // min-height: 100vh;
+    text-align: center;
+    padding-top: 100px;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    p {
+      color: #777;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      padding: 10px;
+    }
+
+    .row {
+      margin-top: 10%;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+
+      .course-col {
+        flex-basis: 31%;
+        background: #fff3f3;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+
+        h3 {
+          text-align: center;
+          font-weight: 600;
+          margin: 10px 0;
+        }
+      }
+
+      .course-col:hover {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  //campus section
+  .campus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+    p {
+      padding-bottom: 30px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      .campus-col {
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+
+        .layer {
+          background: transparent;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: 0.5s;
+
+          h3 {
+            width: 100%;
+            font-weight: 500;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgb(7, 7, 7);
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+          }
+        }
+        //transition effect, title pops up from bottom
+        //thanks to opacity:0 above to now on hover opacity is 1
+        .layer:hover h3 {
+          bottom: 49%;
+          opacity: 1;
+        }
+
+        //add red to image with hover effect
+        .layer:hover {
+          background: rgba(226, 0, 0, 0.23);
+        }
+      }
+    }
+  }
+
+  // facilities section
+  .facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+    p {
+      padding: 0;
+    }
+
+    h3 {
+      margin-top: 16px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .facilities-col {
+      flex-basis: 32%;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      text-align: left;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .testimonials {
+    width: 75%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .testimonial-col {
+      flex-basis: 44%;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      text-align: left;
+      background: #fff3f3;
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      margin-right: 20px;
+
+      p {
+        padding: 0;
+      }
+
+      h3 {
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      img.star {
+        flex-direction: row;
+        color: rgb(13, 231, 13);
+      }
+
+      img.pic {
+        height: 130px;
+        margin-left: 5px;
+        margin-right: 20px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(/imgs/img05.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    padding: 200px 0;
+
+    h1 {
+      color: #fff;
+      font-size: 40px;
+      margin-bottom: 40px;
+      padding: 0;
+    }
+
+    a.hero-btn {
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 12px 34px;
+      font-size: 13px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    //button hover styling
+    a.hero-btn:hover {
+      border: 1px solid #f44336;
+      background: #f44336;
+      transition: 1s;
+    }
+  }
+
+  // footer
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+    h4 {
+      margin-bottom: 25px;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .icons {
+      margin: 10px 20px;
+      cursor: pointer;
+      padding: 18px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    .icons {
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .text-box {
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    //nav bar on small screen
+    .nav-links {
+      position: absolute;
+      background: #f86257;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+
+      //nav items in column & centered
+      ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+
+  .course {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  .campus {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  .facilities {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  .testimonials {
+    .testimonial-col {
+      img.pic {
+        margin-left: 0px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .testimonials {
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
